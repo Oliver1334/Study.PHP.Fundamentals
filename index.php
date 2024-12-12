@@ -19,23 +19,23 @@
 <?php
     //variable = a reusable container that holds data: string, integer, float, boolean
     //strings
-    $name = "Mord Mord";
-    $food = "Chicken";
-    $email = "test@gmail.com";
+    // $name = "Mord Mord";
+    // $food = "Chicken";
+    // $email = "test@gmail.com";
     //integers
-    $age = 29; 
-    $users = 2;
-    $quantity = 4;
+    // $age = 29; 
+    // $users = 2;
+    // $quantity = 4;
     //floats
-    $gpa = 2.5;
-    $price = 7.86;
-    $tax_rate = 5.1;
+    // $gpa = 2.5;
+    // $price = 7.86;
+    // $tax_rate = 5.1;
     //Booleans
-    $employed = false;
-    $online = true;
-    $for_sale = false;
+    // $employed = false;
+    // $online = true;
+    // $for_sale = false;
 
-    $total = null;
+    // $total = null;
 
     // echo "Hello {$name}<br>";
     // echo "Do you like {$food}?<br>";
@@ -51,9 +51,42 @@
 
     // echo"Online status: {$online}<br>"
 
-    echo"You have ordered {$quantity} x {$food}s<br>";
-    $total = $quantity * $price;
-    echo"Your total is: \${$total}";
+    // echo"You have ordered {$quantity} x {$food}s<br>";
+    // $total = $quantity * $price;
+    // echo"Your total is: \${$total}";
+?>
+
+<!-- Arithmetic in PHP -->
+ <?php
+    // Arithmetic operators
+    // + - * / ** %
+    // $x = 10;
+    // $y = 2;
+    // $z = null;
+
+    // $z = $x + $y;
+    // $z = $x - $y;
+    // $z = $x * $y;
+    // $z = $x / $y;
+    // $z = $x ** $y; //10 to the power of 2
+    // $z = $x % $y; // modulus remainder of any division 
+
+    // echo $z;
 
 
+    // Increment/decrement operators
+    // ++, --
+    // $counter = 10;
+
+    // $counter-=2;
+    // echo $counter;
+
+
+    // Operator Precedence
+    // ()
+    // **
+    // * / %
+    // + -
+    // $total = 1 + 2 - 3 * 4 /5 ** 6;
+    // echo $total;
 ?>
