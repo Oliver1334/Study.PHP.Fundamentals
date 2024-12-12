@@ -1,13 +1,6 @@
 <?php
-echo"I love pizza <br>";
-echo"pizza pizza brrrr beep boop";
-
-// comment
-/* this is
-a multi
-line comment
-*/
-
+echo"Intro to PHP<br>";
+echo"This is an introduction to PHP";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +10,6 @@ line comment
     <title>Document</title>
 </head>
 <body>
-    <button>order pizza</button>
+    <button>PHP elephant button</button>
 </body>
 </html>
