@@ -112,7 +112,7 @@
 //      Better for submitting credentials
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -128,13 +128,42 @@
         <input type="submit" value="Log in">
     </form>
 </body>
-</html>
+</html> -->
 
 <?php
     // echo "{$_GET["username"]} <br>";
     // echo "{$_GET["password"]} <br>";
 
-    echo "{$_POST["username"]} <br>";
-    echo "{$_POST["password"]} <br>";
+    // echo "{$_POST["username"]} <br>";
+    // echo "{$_POST["password"]} <br>";
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <label>quantity: </label><br>
+        <input type="text" name="quantity">
+        <input type="submit" value="total">
+</form>
+</body>
+</html>
+
+<?php
+    $item = "pizza";
+    $price = 5.99;
+    $quantity = $_POST["quantity"];  //caching post value in local variable
+
+    $total = $quantity * $price;
+
+    echo"You have ordered {$quantity} x {$item}(s) <br>";
+    echo"Your total is: \${$total}";
+    //Post more secure than get
 
 ?>
