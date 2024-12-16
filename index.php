@@ -139,7 +139,7 @@
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -153,17 +153,61 @@
         <input type="submit" value="total">
 </form>
 </body>
-</html>
+</html> -->
 
 <?php
-    $item = "pizza";
-    $price = 5.99;
-    $quantity = $_POST["quantity"];  //caching post value in local variable
+    // $item = "pizza";
+    // $price = 5.99;
+    // $quantity = $_POST["quantity"];  //caching post value in local variable
 
-    $total = $quantity * $price;
+    // $total = $quantity * $price;
 
-    echo"You have ordered {$quantity} x {$item}(s) <br>";
-    echo"Your total is: \${$total}";
+    // echo"You have ordered {$quantity} x {$item}(s) <br>";
+    // echo"Your total is: \${$total}";
     //Post more secure than get
-
 ?>
+
+<!-- Math Functions -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="index.php" method="post">
+        <label>x:</label>
+        <input type="text" name="x">
+        <br>
+        <label>y:</label>
+        <input type="text" name="y">
+        <br>
+        <label>z:</label>
+        <input type="text" name="z">
+        <input type="submit" value="total">
+
+    </form>
+ </body>
+ </html>
+ <?php
+    $x = $_POST["x"];
+    $y = $_POST["y"];
+    $z = $_POST["z"];
+    $total = null;
+
+    // $total = abs($x); //absolute value -100 -> 100
+    // $total = round($x);
+    // $total = floor($x); //always round down
+    // $total = ceil($x); //always round up
+    // $total = sqrt($x); //square root
+    // $total = pow($x, $y); //x to the power of y
+    //$total = max($x, $y, $z); //gives highest value of values given
+    //$total = min($x, $y, $z); //gives lowest value of values given
+    //$total = pi(); //prints pi
+    //$total = rand(1,6); //random number function min, max
+
+    
+    echo $total
+
+ ?>
