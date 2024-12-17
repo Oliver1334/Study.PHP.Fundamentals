@@ -209,7 +209,7 @@
     //echo $total
  ?>
 
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
  <html lang="en">
  <head>
     <meta charset="UTF-8">
@@ -224,22 +224,40 @@
 
     </form><br>
  </body>
- </html>
+ </html> -->
 
  <?php
-    $radius =$_POST["radius"];
-    $circumference = null;
-    $area = null;
-    $volume = null;
+    // $radius =$_POST["radius"];
+    // $circumference = null;
+    // $area = null;
+    // $volume = null;
 
-    $circumference = 2 * pi() * $radius;
-    $circumference = round($circumference, 2);  // rounds to 2 digits after decimal
-    $area = pi() * pow($radius, 2);
-    $area = round($area, 2);
-    $volume = 4/3 * pi() * pow($radius, 3);
-    $volume = round($volume, 2);
+    // $circumference = 2 * pi() * $radius;
+    // $circumference = round($circumference, 2);  // rounds to 2 digits after decimal
+    // $area = pi() * pow($radius, 2);
+    // $area = round($area, 2);
+    // $volume = 4/3 * pi() * pow($radius, 3);
+    // $volume = round($volume, 2);
 
-    echo"Circumference = {$circumference}cm <br>";
-    echo"Area = {$area}cm^2 <br>";
-    echo"Volume = {$volume}cm^3 <br>";
+    // echo"Circumference = {$circumference}cm <br>";
+    // echo"Area = {$area}cm^2 <br>";
+    // echo"Volume = {$volume}cm^3 <br>";
  ?>
+
+ <!-- If statements -->
+<?php
+    $age = 101;
+
+    if ($age >= 100){
+        echo "You are too old to enter this site!";
+    }
+    else if ($age >= 18){
+        echo "You may enter this site";
+    } else if($age <= 0){
+        echo "That wasn't a valid age";
+    }
+    else {
+        echo "YOU ARE NOT ALLOWED, you must be 18+ to enter";
+    }
+
+?>
