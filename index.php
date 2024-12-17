@@ -272,19 +272,38 @@
  ?>
 
  <?php
-    $hours = 50;
-    $rate = 15;
-    $weekly_pay = null;
+//     $hours = 50;
+//     $rate = 15;
+//     $weekly_pay = null;
 
-    if($hours <= 0){
-        $weekly_pay = 0;
-    }
-    else if($hours <= 40){
-        $weekly_pay = $hours * $rate;
-    }
-    else{
-        $weekly_pay = ($rate * 40) + (($hours - 40) * ($rate * 1.5));
-    }
+//     if($hours <= 0){
+//         $weekly_pay = 0;
+//     }
+//     else if($hours <= 40){
+//         $weekly_pay = $hours * $rate;
+//     }
+//     else{
+//         $weekly_pay = ($rate * 40) + (($hours - 40) * ($rate * 1.5));
+//     }
 
-    echo "You made \${$weekly_pay} this week";
-?>
+//     echo "You made \${$weekly_pay} this week";
+// ?>
+
+<!-- Logical Operators -->
+ <?php
+ $temp = 15; //degrees C
+ $cloudy = false;
+
+ if($temp < 0 || $temp > 30){
+    echo"The weather is bad <br>";
+ } 
+ else {
+    echo"The weather is good <br>";
+ }
+
+ if(!$cloudy){
+    echo"It's sunny.";
+ } else {
+    echo"It's cloudy";
+ }
+?> 
