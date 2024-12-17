@@ -168,7 +168,7 @@
 ?>
 
 <!-- Math Functions -->
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
  <html lang="en">
  <head>
     <meta charset="UTF-8">
@@ -189,12 +189,12 @@
 
     </form>
  </body>
- </html>
+ </html> -->
  <?php
-    $x = $_POST["x"];
-    $y = $_POST["y"];
-    $z = $_POST["z"];
-    $total = null;
+    // $x = $_POST["x"];
+    // $y = $_POST["y"];
+    // $z = $_POST["z"];
+    // $total = null;
 
     // $total = abs($x); //absolute value -100 -> 100
     // $total = round($x);
@@ -206,8 +206,40 @@
     //$total = min($x, $y, $z); //gives lowest value of values given
     //$total = pi(); //prints pi
     //$total = rand(1,6); //random number function min, max
+    //echo $total
+ ?>
 
-    
-    echo $total
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="index.php" method="post">
+        <label>radius:</label>
+        <input type="text" name="radius">
+        <input type="submit" value="calculate">
 
+    </form><br>
+ </body>
+ </html>
+
+ <?php
+    $radius =$_POST["radius"];
+    $circumference = null;
+    $area = null;
+    $volume = null;
+
+    $circumference = 2 * pi() * $radius;
+    $circumference = round($circumference, 2);  // rounds to 2 digits after decimal
+    $area = pi() * pow($radius, 2);
+    $area = round($area, 2);
+    $volume = 4/3 * pi() * pow($radius, 3);
+    $volume = round($volume, 2);
+
+    echo"Circumference = {$circumference}cm <br>";
+    echo"Area = {$area}cm^2 <br>";
+    echo"Volume = {$volume}cm^3 <br>";
  ?>
