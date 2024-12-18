@@ -391,9 +391,8 @@
        
     // }
 ?>
-
 <!-- For Loops -->
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
  <html lang="en">
  <head>
     <meta charset="UTF-8">
@@ -407,16 +406,54 @@
         <input type="submit" value="start">
     </form>
  </body>
- </html>
+ </html> -->
  <?php
 
         // for($i = 10;$i > 0; $i-=2){
         //     echo $i . "<br>";
         // }
-        $counter = $_POST["counter"];
+        // $counter = $_POST["counter"];
 
-        for($i = $counter; $i >= 1 ; $i--){
-            echo $i . "<br>";
+        // for($i = $counter; $i >= 1 ; $i--){
+        //     echo $i . "<br>";
+        // }
+?>
+
+<!-- While Loops -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action ="index.php" method="post">
+        <input type="submit" name="stop" value="stop">
+    </form>
+ </body>
+ </html>
+ <?php
+    
+    // $counter = 0;
+    // while($counter < 10){
+    //     $counter++;
+    //     echo $counter . "<br>";
+    // }
+
+    $seconds = 0;
+    $running = true;
+
+    while($running){
+        if(isset($_POST["stop"])){
+            $running = false;
         }
+        else{
+            //wait one second
+            $seconds++;
+            echo$seconds . "<br";
+
+        }
+    }
 
 ?>
