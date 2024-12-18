@@ -360,36 +360,63 @@
     //         echo"{$grade} is not valid";
     // }
 
-    $date = date("l");
+    // $date = date("l");
 
-    $date = "Sunday";
+    // $date = "Sunday";
 
-    switch($date){
-        case "Monday":
-            echo "I hate mondays";
-            break;
-        case "Tuesday":
-            echo "Band practice is tuesday";
-            break;
-        case "Wednesday":
-            echo "The work week is half over!";
-            break;
-        case "Thursday":
-            echo "It's almost the weekend";
-            break;
-        case "Friday":
-            echo "The weekend is here!";
-            break;
-        case "Saturday":
-            echo "Time to party!";
-            break;
-        case "Sunday":
-            echo "Time to relax";
-            break;
-        default:
-            echo "{$date} is not a day";
+    // switch($date){
+    //     case "Monday":
+    //         echo "I hate mondays";
+    //         break;
+    //     case "Tuesday":
+    //         echo "Band practice is tuesday";
+    //         break;
+    //     case "Wednesday":
+    //         echo "The work week is half over!";
+    //         break;
+    //     case "Thursday":
+    //         echo "It's almost the weekend";
+    //         break;
+    //     case "Friday":
+    //         echo "The weekend is here!";
+    //         break;
+    //     case "Saturday":
+    //         echo "Time to party!";
+    //         break;
+    //     case "Sunday":
+    //         echo "Time to relax";
+    //         break;
+    //     default:
+    //         echo "{$date} is not a day";
        
-    }
+    // }
+?>
 
+<!-- For Loops -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="index.php" method="post">
+        <label>Enter a number to count down from:</label>
+        <input type="text" name="counter">
+        <input type="submit" value="start">
+    </form>
+ </body>
+ </html>
+ <?php
+
+        // for($i = 10;$i > 0; $i-=2){
+        //     echo $i . "<br>";
+        // }
+        $counter = $_POST["counter"];
+
+        for($i = $counter; $i >= 1 ; $i--){
+            echo $i . "<br>";
+        }
 
 ?>
