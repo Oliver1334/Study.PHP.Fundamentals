@@ -459,7 +459,7 @@
 
 <!-- Arrays -->
  <?php
-    $foods = array("apple", "orange", "banana", "coconut");
+    // $foods = array("apple", "orange", "banana", "coconut");
 
     // $foods[0] = "garlic";
     // array_push($foods, "garlic", "kiwi");
@@ -472,8 +472,68 @@
     //     echo $foods[$i] . "<br>";
     // }
 
-    foreach($foods as $food){ //foreach to display elements of array
-        echo $food . "<br>";
-    }
+    // foreach($foods as $food){ //foreach to display elements of array
+    //     echo $food . "<br>";
+    // }
+?>
+
+<!-- Associative Arrays -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="index.php" method="post">
+        <label>Enter a country</label>
+        <input type="text" name="country">
+        <input type="submit">
+
+    </form>
+ </body>
+ </html>
+ <?php
+    // associative array = An array made up of key=>value pairs
+
+    // countries => capitals
+    // id => username
+    // item => price
+
+    $capitals = array("USA"=>"Washington D.C", 
+                     "Japan"=>"Kyoto",
+                     "South Korea"=>"Seoul",
+                     "India"=>"New Delhi");
+
+    // $capitals["USA"] = "Las Vegas";
+    // $capitals["China"] = "Beijing";
+    // array_pop($capitals);
+    // array_shift($capitals);
+    // $keys = array_keys($capitals);
+    // $values = array_values($capitals);
+    // $capitals = array_flip($capitals);
+    // $capitals = array_reverse($capitals);
+    // echo count($capitals);
+
+
+    // foreach($capitals as $key => $value){
+    //     echo"{$key} = {$value} <br>";
+    // }
+
+    // foreach($keys as $key){  //just show keys
+    //     echo "{$key} <br>";
+    // }
+
+    // foreach($values as $value){ //just show values
+    //     echo "{$value} <br>";
+    // }
+
+    $capital = $_POST["country"];
+
+    // echo $capital;
+    echo "The capital is $capitals[$capital]";
+
+
 
 ?>
