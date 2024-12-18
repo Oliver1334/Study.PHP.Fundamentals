@@ -420,7 +420,7 @@
 ?>
 
 <!-- While Loops -->
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
  <html lang="en">
  <head>
     <meta charset="UTF-8">
@@ -432,7 +432,7 @@
         <input type="submit" name="stop" value="stop">
     </form>
  </body>
- </html>
+ </html> -->
  <?php
     
     // $counter = 0;
@@ -441,19 +441,39 @@
     //     echo $counter . "<br>";
     // }
 
-    $seconds = 0;
-    $running = true;
+    // $seconds = 0;
+    // $running = true;
 
-    while($running){
-        if(isset($_POST["stop"])){
-            $running = false;
-        }
-        else{
-            //wait one second
-            $seconds++;
-            echo$seconds . "<br";
+    // while($running){
+    //     if(isset($_POST["stop"])){
+    //         $running = false;
+    //     }
+    //     else{
+    //         //wait one second
+    //         $seconds++;
+    //         echo$seconds . "<br";
 
-        }
+    //     }
+    // }
+?>
+
+<!-- Arrays -->
+ <?php
+    $foods = array("apple", "orange", "banana", "coconut");
+
+    // $foods[0] = "garlic";
+    // array_push($foods, "garlic", "kiwi");
+    // array_pop($foods);
+    // array_shift($foods);
+    // $foods = array_reverse($foods);
+    // echo count($foods);
+
+    // for($i = 0; $i < count($foods); $i++){
+    //     echo $foods[$i] . "<br>";
+    // }
+
+    foreach($foods as $food){ //foreach to display elements of array
+        echo $food . "<br>";
     }
 
 ?>
