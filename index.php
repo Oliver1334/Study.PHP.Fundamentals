@@ -643,7 +643,7 @@
 ?>
 
 <!-- Checkboxes -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -663,16 +663,14 @@
         <input type="submit" name="submit">
     </form>
 </body>
-</html>
+</html> -->
 <?php
-    if(isset($_POST["submit"])){
+    // if(isset($_POST["submit"])){
+    //     $foods = $_POST["foods"];
 
-
-        $foods = $_POST["foods"];
-
-        foreach($foods as $food){
-            echo $food . "<br>";
-        }
+    //     foreach($foods as $food){
+    //         echo $food . "<br>";
+    //     }
         // if(isset($_POST["pizza"])){
         //     echo"You like pizza! <br>";
         // }
@@ -697,6 +695,41 @@
         // if(empty($_POST["taco"])){
         //     echo"You DON'T like Tacos! <br>";
         // }
-    }
+    //}
+?>
+
+<!-- Functions in PHP -->
+ <?php
+    // function happy_birthday($first_name, $age){
+    //     echo"Happy Birthday to you!<br>";
+    //     echo"Happy Birthday to you!<br>";
+    //     echo"Happy Birthday dear $first_name!<br>";
+    //     echo"You are $age years old! <br><br>";
+
+    // }
+    // happy_birthday("Squidward", 30);
+
+    // function is_even($number){
+    //     $result = null;
+
+    //     if($number % 2 == 0){
+    //         $result = "$number is even";
+    //         echo $result;
+    //     } else {
+    //         $result = "$number is not even";
+    //         echo $result;
+    //     }
+    // }
+    // is_even(9);
+
+    // function hypotenuse(int $a, int $b){ //can list datatype before parameter
+    //     $c = sqrt($a ** 2 + $b ** 2);
+    //     return $c;
+    // }
+
+    // echo hypotenuse(3, 4);
+
+
+
 
 ?>
