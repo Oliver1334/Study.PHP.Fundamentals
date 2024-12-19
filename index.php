@@ -595,7 +595,7 @@
 ?>
 
 <!-- Radio Buttons -->
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
  <html lang="en">
  <head>
     <meta charset="UTF-8">
@@ -614,33 +614,89 @@
 
     </form>
  </body>
- </html>
-
-
+ </html> -->
 <?php
+// if(isset($_POST["confirm"])){
 
-if(isset($_POST["confirm"])){
+//     $credit_card = null;
 
-    $credit_card = null;
-
-    if (isset($_POST["credit_card"])){
-        $credit_card = $_POST["credit_card"];
+//     if (isset($_POST["credit_card"])){
+//         $credit_card = $_POST["credit_card"];
         
+//     }
+
+//         switch($credit_card){
+//             case "Visa":
+//                 echo"You selected Visa!";
+//                 break;
+//             case "Mastercard":
+//                 echo"You selected Mastercard!";
+//                 break;
+//             case "American Express":
+//                 echo"You selected American Express!";
+//                 break;
+//             default:
+//             echo"Please make a selection";
+
+//         }
+// }
+?>
+
+<!-- Checkboxes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <input type="checkbox" name="foods[]" value="Pizza">
+        Pizza<br>
+        <input type="checkbox" name="foods[]" value="Hamburger">
+        Hamburger<br>
+        <input type="checkbox" name="foods[]" value="Hotdog">
+        Hotdog<br>
+        <input type="checkbox" name="foods[]" value="Taco">
+        Taco<br>
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>
+<?php
+    if(isset($_POST["submit"])){
+
+
+        $foods = $_POST["foods"];
+
+        foreach($foods as $food){
+            echo $food . "<br>";
+        }
+        // if(isset($_POST["pizza"])){
+        //     echo"You like pizza! <br>";
+        // }
+        // if(isset($_POST["hamburger"])){
+        //     echo"You like Hamburgers! <br>";
+        // }
+        // if(isset($_POST["hotdog"])){
+        //     echo"You like Hotdogs! <br>";
+        // }
+        // if(isset($_POST["taco"])){
+        //     echo"You like Tacos! <br>";
+        // }
+        // if(empty($_POST["pizza"])){
+        //     echo"You DON'T like pizza! <br>";
+        // }
+        // if(empty($_POST["hamburger"])){
+        //     echo"You DON'T like Hamburgers! <br>";
+        // }
+        // if(empty($_POST["hotdog"])){
+        //     echo"You DON'T like Hotdogs! <br>";
+        // }
+        // if(empty($_POST["taco"])){
+        //     echo"You DON'T like Tacos! <br>";
+        // }
     }
 
-        switch($credit_card){
-            case "Visa":
-                echo"You selected Visa!";
-                break;
-            case "Mastercard":
-                echo"You selected Mastercard!";
-                break;
-            case "American Express":
-                echo"You selected American Express!";
-                break;
-            default:
-            echo"Please make a selection";
-
-        }
-}
 ?>
