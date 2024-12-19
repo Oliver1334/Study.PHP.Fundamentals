@@ -1,3 +1,65 @@
+<!-- Password Hashing -->
+<?php
+    // hashing = transforming sensitive data (password)
+    //          into letters, numbers, and/or symbols
+    //          via a mathematical process. (similar to encryption)
+    //          Hides the original data from 3rd parties.
+
+    $password = "chickawn123";
+
+    $hash = password_hash($password, PASSWORD_DEFAULT); //password default is the decrypt algorithm
+
+    // echo $hash;
+
+    if(password_verify("chickawn123", $hash)){
+        echo"You are logged in!";
+        
+    } else{
+        echo"Incorrect Password!";
+    }
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Server in php -->
  <!-- <!DOCTYPE html>
  <html lang="en">
@@ -18,7 +80,7 @@
  </body>
  </html> -->
  <?php
-    // $_SERVER = SGB that contains headers, paths and script locations.
+    // $_SERVER = SGV that contains headers, paths and script locations.
     // The entries in this array are created by the web server.
     // Shows nearly everything you need to know about the current web page env.
 
