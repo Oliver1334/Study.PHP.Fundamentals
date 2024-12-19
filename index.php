@@ -822,10 +822,10 @@
     //          and includes it in your php file.
     //          Sections of your website become reusable
     //          Changes only need to be made in one place.
-    include("header.html")
+    // include("header.html")
 
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -836,7 +836,28 @@
     This is the homepage<br>
     stuff about homepage goes here<br>
 </body>
-</html>
+</html> -->
 <?php
-include("footer.html");
+// include("footer.html");
+?>
+
+<!-- Cookies in php -->
+ <?php
+    // cookie = information about a user stored in a user's web-browser
+    // targeted advertisements, browsing preferences, and
+    // other non-sensitive data.
+    setcookie("fav_food", "chicken", time() + (86400 * 2), "/");
+    setcookie("fav_drink", "coffee", time() + (86400 * 3), "/");
+    setcookie("fav_dessert", "chicken", time() + (86400 * 4), "/");
+
+    foreach($_COOKIE as $key => $value){
+        echo"$key = $value <br>";
+    }
+
+    if(isset($_COOKIE["fav_food"])){
+        echo"BUY SOME {$_COOKIE["fav_food"]} !!!";
+    }
+    else{
+        echo"i don't know your favorite food";
+    }
 ?>
