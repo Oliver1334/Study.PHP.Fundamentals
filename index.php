@@ -728,8 +728,35 @@
     // }
 
     // echo hypotenuse(3, 4);
+?>
+<!-- String Functions -->
+<?php
+    $username = "Mord The Destroyer";
+    $phone = "123-456-7890";
+
+    // $username = strtolower($username);
+    // $username = strtoupper($username);
+    // $username = trim($username);
+    // $username = str_pad($username, 20, "0"); //add characters on
+    // $phone = str_replace("-", "", $phone);
+    // $username = strrev($username); // reverse string
+    // $username = str_shuffle($username);
+    //$equals = strcmp($username, "Mord Mord"); //returns 0 if strings are the same
+    //$count = strlen($phone); //string length
+    //$index = strpos($username, " "); //index position of first space
+    // $firstname = substr($username, 0, 4); //starting index, ending index
+    // $fullname = explode(" ", $username); //puts into an array splitting at given value
+    // $username = implode(" ", $username); // turns array to string with given value inbetween elements
 
 
+    // foreach($fullname as $name){
+    //     echo $name . "<br>";
+    // }
 
-
+    // echo $username;
+    echo $equals;
+    echo $count;
+    echo $index;
+    echo $firstname;
+    // echo $phone;
 ?>
