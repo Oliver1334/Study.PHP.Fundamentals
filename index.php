@@ -1,10 +1,42 @@
+<!-- Server in php -->
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="<?php
+    //  $_SERVER["PHP_SELF"]
+     ?>" method="post">
+        username:<br>
+        <input type="text" name="username">
+        <input type="submit">
+    </form>
+    
+ </body>
+ </html> -->
+ <?php
+    // $_SERVER = SGB that contains headers, paths and script locations.
+    // The entries in this array are created by the web server.
+    // Shows nearly everything you need to know about the current web page env.
+
+    // foreach($_SERVER as $key => $value){
+    //     echo"{$key} = {$value} <br>";
+    // }
+    // if($_SERVER["REQUEST_METHOD"] == "POST"){
+    //     echo"HELLO";
+    // }
+?>
+<!-- Sessions in php -->
 <?php
  // session = SGB (Super Global Variable) used to store information on
  // a user across multiple pages. A user is assigned a session-id
  // eg. login credentials.
-    session_start();
+    // session_start();
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,40 +53,32 @@
     </form>
 
 </body>
-</html>
+</html> -->
 <?php
     // $_SESSION["username"] = "MordMord";
     // $_SESSION["password"] = "chickawn123";
     // echo $_SESSION["username"] . "<br>";
     // echo $_SESSION["password"] . "<br>";
 
-    if(isset($_POST["login"])){
+    // if(isset($_POST["login"])){
         
         
-        if(!empty($_POST["username"]) && 
-        !empty($_POST["password"])){
+    //     if(!empty($_POST["username"]) && 
+    //     !empty($_POST["password"])){
             
-            $_SESSION["username"] = $_POST["username"];
-            $_SESSION["password"] = $_POST["password"];
+    //         $_SESSION["username"] = $_POST["username"];
+    //         $_SESSION["password"] = $_POST["password"];
 
-            header("Location: home.php");
+    //         header("Location: home.php");
 
-            // echo $_SESSION["username"] . "<br>";
-            // echo $_SESSION["password"] . "<br>";
-    } else {
-        echo"Missing username/password <br>";
-    }
+    //         // echo $_SESSION["username"] . "<br>";
+    //         // echo $_SESSION["password"] . "<br>";
+    // } else {
+    //     echo"Missing username/password <br>";
+    // }
 
-    }
-
-
-
-
-
+    // }
 ?>
-
-
-
 <!-- //Introduction -->
 <!-- <?php
 // echo"Intro to PHP<br>";
