@@ -1,3 +1,60 @@
+<?php
+ // session = SGB (Super Global Variable) used to store information on
+ // a user across multiple pages. A user is assigned a session-id
+ // eg. login credentials.
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        username:<br>
+        <input type="text" name="username"><br>
+        password:<br>
+        <input type="password" name="password"><br>
+        <input type="submit" name="login" value="login">
+    </form>
+
+</body>
+</html>
+<?php
+    // $_SESSION["username"] = "MordMord";
+    // $_SESSION["password"] = "chickawn123";
+    // echo $_SESSION["username"] . "<br>";
+    // echo $_SESSION["password"] . "<br>";
+
+    if(isset($_POST["login"])){
+        
+        
+        if(!empty($_POST["username"]) && 
+        !empty($_POST["password"])){
+            
+            $_SESSION["username"] = $_POST["username"];
+            $_SESSION["password"] = $_POST["password"];
+
+            header("Location: home.php");
+
+            // echo $_SESSION["username"] . "<br>";
+            // echo $_SESSION["password"] . "<br>";
+    } else {
+        echo"Missing username/password <br>";
+    }
+
+    }
+
+
+
+
+
+?>
+
+
+
 <!-- //Introduction -->
 <!-- <?php
 // echo"Intro to PHP<br>";
@@ -334,7 +391,6 @@
 
     // echo"The ticket price is \${$ticket}";
 ?>
-
 <!-- Switch Statements -->
  <?php
 
@@ -418,7 +474,6 @@
         //     echo $i . "<br>";
         // }
 ?>
-
 <!-- While Loops -->
  <!-- <!DOCTYPE html>
  <html lang="en">
@@ -456,7 +511,6 @@
     //     }
     // }
 ?>
-
 <!-- Arrays -->
  <?php
     // $foods = array("apple", "orange", "banana", "coconut");
@@ -476,7 +530,6 @@
     //     echo $food . "<br>";
     // }
 ?>
-
 <!-- Associative Arrays -->
  <!-- <!DOCTYPE html>
  <html lang="en">
@@ -534,7 +587,6 @@
     // echo $capital;
     // echo "The capital is $capitals[$capital]";
 ?>
-
 <!-- isset and isempty -->
  <!-- <!DOCTYPE html>
  <html lang="en">
@@ -593,7 +645,6 @@
     //     }
     // }
 ?>
-
 <!-- Radio Buttons -->
  <!-- <!DOCTYPE html>
  <html lang="en">
@@ -641,7 +692,6 @@
 //         }
 // }
 ?>
-
 <!-- Checkboxes -->
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -697,7 +747,6 @@
         // }
     //}
 ?>
-
 <!-- Functions in PHP -->
  <?php
     // function happy_birthday($first_name, $age){
@@ -760,7 +809,6 @@
     // echo $firstname;
     // echo $phone;
 ?>
-
 <!-- Sanitise/Validate user input -->
  <!-- <!DOCTYPE html>
  <html lang="en">
@@ -815,7 +863,6 @@
     //     }
     // }
 ?>
-
 <!-- include() function -->
  <?php
     //include() = Copies the content of a file (php/html/text)
@@ -823,7 +870,6 @@
     //          Sections of your website become reusable
     //          Changes only need to be made in one place.
     // include("header.html")
-
 ?>
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -840,24 +886,25 @@
 <?php
 // include("footer.html");
 ?>
-
 <!-- Cookies in php -->
  <?php
     // cookie = information about a user stored in a user's web-browser
     // targeted advertisements, browsing preferences, and
     // other non-sensitive data.
-    setcookie("fav_food", "chicken", time() + (86400 * 2), "/");
-    setcookie("fav_drink", "coffee", time() + (86400 * 3), "/");
-    setcookie("fav_dessert", "chicken", time() + (86400 * 4), "/");
+    // setcookie("fav_food", "chicken", time() + (86400 * 2), "/");
+    // setcookie("fav_drink", "coffee", time() + (86400 * 3), "/");
+    // setcookie("fav_dessert", "chicken", time() + (86400 * 4), "/");
 
-    foreach($_COOKIE as $key => $value){
-        echo"$key = $value <br>";
-    }
+    // foreach($_COOKIE as $key => $value){
+    //     echo"$key = $value <br>";
+    // }
 
-    if(isset($_COOKIE["fav_food"])){
-        echo"BUY SOME {$_COOKIE["fav_food"]} !!!";
-    }
-    else{
-        echo"i don't know your favorite food";
-    }
+    // if(isset($_COOKIE["fav_food"])){
+    //     echo"BUY SOME {$_COOKIE["fav_food"]} !!!";
+    // }
+    // else{
+    //     echo"i don't know your favorite food";
+    // }
 ?>
+<!-- Sessions in php -->
+ 
