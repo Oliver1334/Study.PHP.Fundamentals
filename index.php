@@ -1,3 +1,50 @@
+<!-- PHP Connect to MySQL database -->
+ <?php
+//Two ways to connect
+// 1. MySQLi Extension
+// 2. PDO (PHP Data Objects)
+include("database.php");
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello<br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Password Hashing -->
 <?php
     // hashing = transforming sensitive data (password)
@@ -5,61 +52,19 @@
     //          via a mathematical process. (similar to encryption)
     //          Hides the original data from 3rd parties.
 
-    $password = "chickawn123";
+    //$password = "chickawn123";
 
-    $hash = password_hash($password, PASSWORD_DEFAULT); //password default is the decrypt algorithm
+    //$hash = password_hash($password, PASSWORD_DEFAULT); //password default is the decrypt algorithm
 
     // echo $hash;
 
-    if(password_verify("chickawn123", $hash)){
-        echo"You are logged in!";
+    // if(password_verify("chickawn123", $hash)){
+    //     echo"You are logged in!";
         
-    } else{
-        echo"Incorrect Password!";
-    }
-
-
-
-
-
+    // } else{
+    //     echo"Incorrect Password!";
+    // }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Server in php -->
  <!-- <!DOCTYPE html>
  <html lang="en">
