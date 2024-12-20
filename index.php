@@ -1,54 +1,62 @@
+<!-- Query to MySQL database -->
+<?php
+include("database.php");
+
+//query multiple rows from database
+$sql = "SELECT * FROM users";
+$result = mysqli_query($conn, $sql);
+
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){ 
+    echo $row["id"] . "<br>";
+    echo $row["user"] . "<br>";
+    echo $row["reg_date"] . "<br>";
+};
+}
+else{
+    echo"No user found";
+}
+
+//query one row from database
+// $sql = "SELECT * FROM users WHERE user = 'Sandy'";
+// $result = mysqli_query($conn, $sql);
+
+// if(mysqli_num_rows($result) > 0){
+//     $row = mysqli_fetch_assoc($result); //fetches associative array, key => values
+//     echo $row["id"] . "<br>";
+//     echo $row["user"] . "<br>";
+//     echo $row["reg_date"] . "<br>";
+// }
+// else{
+//     echo"No user found";
+// }
+
+mysqli_close($conn);
+?>
+
 <!-- PHP Connect to MySQL database -->
  <?php
 //Two ways to connect
 // 1. MySQLi Extension
 // 2. PDO (PHP Data Objects)
-include("database.php");
+// include("database.php");
 
-$username = "Patrick";
-$password = "Rock3";
-$hash = password_hash($password, PASSWORD_DEFAULT);
+// $username = "Patrick";
+// $password = "Rock3";
+// $hash = password_hash($password, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO users (user, password)
-        VALUES ('$username', '$hash')";
-try{
-    mysqli_query($conn, $sql);
-    echo"User is now registered";
-} 
-catch(mysqli_sql_exception){
-    echo"Could not register user!";
-}
+// $sql = "INSERT INTO users (user, password)
+//         VALUES ('$username', '$hash')";
+// try{
+//     mysqli_query($conn, $sql);
+//     echo"User is now registered";
+// } 
+// catch(mysqli_sql_exception){
+//     echo"Could not register user!";
+// }
 
-mysqli_close($conn);
+// mysqli_close($conn);
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Password Hashing -->
 <?php
     // hashing = transforming sensitive data (password)
