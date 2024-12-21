@@ -21,7 +21,6 @@ include("database.php");
 </body>
 </html>
 
-
 <?php
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -41,7 +40,7 @@ include("database.php");
             VALUES ('$username', '$hash')";
 
             try{
-                mysqli_query($conn, $sql);
+                mysqli_query($conn, $sql);  //red conn still works, included from other file
                 echo"You are now registered!";
 
             } 
@@ -53,46 +52,6 @@ include("database.php");
 
 mysqli_close($conn);
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Query to MySQL database -->
 <?php
